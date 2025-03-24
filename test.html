@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 2025 노어과 사물함 결과 조회 </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>숫자 조회 시스템</h1>
+    <input type="text" id="numberInput" placeholder="네 자리 숫자 입력" maxlength="4">
+    <button onclick="lookupValue()">조회</button>
+    <div id="result"></div>
+
+    <script>
+        const data = {
+            "1234": "김경주님, 사물함 번호 21에 배정되셨습니다.",
+            "5678": "이윤아님, 사물함 번호 23에 배정되셨습니다.",
+            "9876": "오승채님, 사물함 번호 24에 배정되셨습니다.",
+            "4321": "김경주님, 사물함 번호 26에 배정되셨습니다."
+        };
+
+        function lookupValue() {
+            const input = document.getElementById("numberInput").value;
+            const resultDiv = document.getElementById("result");
+            
+            if (data[input]) {
+                resultDiv.textContent = `결과: ${data[input]}`;
+            } else {
+                resultDiv.textContent = "해당 숫자에 대한 정보가 없습니다.";
+            }
+        }
+    </script>
+</body>
+</html>
