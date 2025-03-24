@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 2025 노어과 사물함 결과 조회 </title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Sans KR', sans-serif; /* Noto Sans KR 폰트 적용 */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,16 +18,35 @@
             background-position: center; /* 이미지가 화면 중앙에 위치하도록 설정 */
             background-repeat: no-repeat; /* 이미지를 반복하지 않도록 설정 */
         }
+
         input {
             margin: 10px;
             padding: 10px;
             font-size: 16px;
         }
+
+        /* '조회' 버튼 스타일 */
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 15px 30px;
+            font-size: 18px;
+            background: linear-gradient(135deg, #4A90E2, #3A7DFF);
+            color: white;
+            border: none;
+            border-radius: 12px;
             cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
         }
+
+        button:hover {
+            background: linear-gradient(135deg, #3A7DFF, #4A90E2);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background: linear-gradient(135deg, #3581e6, #2a68c1);
+            transform: scale(0.98);
+        }
+
         #result {
             margin-top: 20px;
             font-size: 18px;
